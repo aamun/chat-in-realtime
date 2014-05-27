@@ -1,0 +1,22 @@
+{
+  "name": "awesome-chat",
+  "version": "0.0.1",
+  "authors": [
+    "Aaron Munguia <aamm89@gmail.com>"
+  ],
+  "main": "app.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/javascripts",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "angular": "~1.2.16"
+  }
+}

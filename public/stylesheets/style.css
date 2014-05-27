@@ -1,0 +1,16 @@
+html {
+  height: 100%;
+}
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #00B7FF;
+}
+
+section#chatroom{
+  background: #EFFFEC;
+}

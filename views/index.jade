@@ -1,0 +1,15 @@
+extends layout
+
+block append head
+  script(type='text/javascript',src='/socket.io/socket.io.js')
+  script(type='text/javascript',src='/javascripts/chat.js')
+
+block content
+  section#chatroom
+  div(ng-controller='ChatCtrl')
+    div#messages
+      p(ng-repeat='message in messages', class='{{message.type}}') {{message.text}}
+    form(ng-submit='sendMsg()')
+      input#message(type='text',ng-model='message.text',placeholder='Enter your message here')
+      input#send(type='submit',value='Send')
+  p Angular test: 1 + 2 = {{ 1 + 2 }}
