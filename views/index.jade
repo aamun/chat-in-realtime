@@ -5,21 +5,5 @@ block append head
   script(type='text/javascript',src='/javascripts/chat.js')
 
 block content
-  section#chatroom(ng-controller='ChatCtrl')
-    div#messages
-      p(ng-repeat='message in messages', class='{{message.type}}') 
-        span(ng-show='message.username') {{message.username}}: 
-        {{message.text}}
-    form(ng-submit='sendMsg()')
-      .input-group
-        input#message.form-control(type='text',ng-model='message.text',placeholder='Enter your message here')
-        .input-group-btn
-          input#send.btn.btn-primary(type='submit',value='Send')
-
-    script(type='text/ng-template', id='nameModal.html')
-      div.modal-header 
-        h4.modal-title Please enter a nickname
-      div.modal-body
-        input#nickname.form-control(type='text', ng-model='user.nickname', placeholder='write a nickname')
-      .modal-footer
-        input#setname.btn.btn-primary(type='button',value='Set Name', ng-click='ok()')
+  div.site-wrapper(ng-controller='MainCtrl')
+    div.site-wrapper-inner(ng-view)
