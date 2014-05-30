@@ -1,16 +1,15 @@
 doctype html
-html(ng-app='awesomeChat')
+html(ng-app='chatApp')
   block head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/cover.css')
     script(type='text/javascript',src='/jquery/dist/jquery.min.js')
     script(type='text/javascript',src='/angular/angular.min.js')
+    script(type='text/javascript',src='/angular-route/angular-route.min.js')
     script(type='text/javascript',src='/bootstrap/dist/js/bootstrap.min.js')
     script(type='text/javascript',src='/angular-bootstrap/ui-bootstrap.min.js')
     script(type='text/javascript',src='/angular-bootstrap/ui-bootstrap-tpls.min.js')
   body
-    header#banner
-      h1 Awesome Chat
     block content
-    footer Hope you enjoy your stay here
