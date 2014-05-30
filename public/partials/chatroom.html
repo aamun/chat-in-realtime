@@ -1,0 +1,14 @@
+<section id="chatroom">
+  <h2>Chatroom</h2>
+  <div id="messages">
+    <p ng-repeat="message in messages" class="{{message.type}}">
+      <span ng-show="message.username">{{message.username}}: </span>
+      {{message.text}}
+    </p>
+  </div>
+  <form ng-submit="sendMsg()" role="form">
+    <div class="form-group">
+      <input type="text" id="message" class="form-control" ng-model="message.text" placeholder="Enter your message here">
+    </div>
+  </form>
+</section>
