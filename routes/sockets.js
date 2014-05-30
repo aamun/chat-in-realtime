@@ -23,12 +23,12 @@ exports.initialize = function(server){
             }
         });
 
-        // When socket handle a set_name event
-        socket.on("set_name", function(data){
+        // When socket handle a change:name event
+        socket.on("change:name", function(data){
             // Set nickname
             socket.set('nickname', data.name, function(){
                 // Emit a name_set event
-                socket.emit('name_set', data);
+                socket.emit('init', data);
 
                 // Send wellcome message
                 socket.send(JSON.stringify({
@@ -37,7 +37,7 @@ exports.initialize = function(server){
                 }));
 
                 // Broadcast user_entered event
-                socket.broadcast.emit('user_entered', data);
+                socket.broadcast.emit('user:join', data);
             });
         });
     });
