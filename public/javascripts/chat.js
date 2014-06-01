@@ -1,7 +1,7 @@
 // Angular way ej: https://www.youtube.com/watch?v=6bXpq1xiDsQ
 
 // app.js
-var app = angular.module('chatApp', ['ngRoute', 'chatControllers']);
+var app = angular.module('chatApp', ['ngRoute', 'chatControllers', 'luegg.directives']);
 
 app.config(['$routeProvider', function($routeProvider){
     $routeProvider.
@@ -70,7 +70,7 @@ chatControllers.factory('user', function(){
 
 // Main Controller
 chatControllers.controller('MainCtrl', function($scope, $location, socket, user, messages){
-    
+
     $scope.messages = messages;
     $scope.user = user;
 
@@ -80,10 +80,11 @@ chatControllers.controller('MainCtrl', function($scope, $location, socket, user,
             text: 'Hello ' + user.name,
             type: 'systemMessage'
         };
-        $scope.messages.push(message);
 
         // Redirect to chatroom
         $location.path('/chatroom');
+
+        $scope.messages.push(message);
     });
 
     // Handle message event 
