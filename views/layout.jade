@@ -1,6 +1,9 @@
 doctype html
 html(ng-app='chatApp')
   block head
+    meta(charset='utf-8')
+    meta(http-equiv="X-UA-Compatible",content="IE=edge")
+    meta(name="viewport",content="width=device-width, initial-scale=1")
     title= title
     link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
@@ -8,8 +11,9 @@ html(ng-app='chatApp')
     script(type='text/javascript',src='/jquery/dist/jquery.min.js')
     script(type='text/javascript',src='/angular/angular.min.js')
     script(type='text/javascript',src='/angular-route/angular-route.min.js')
+    script(type='text/javascript',src='/angularjs-scroll-glue/src/scrollglue.js')
     script(type='text/javascript',src='/bootstrap/dist/js/bootstrap.min.js')
     script(type='text/javascript',src='/angular-bootstrap/ui-bootstrap.min.js')
     script(type='text/javascript',src='/angular-bootstrap/ui-bootstrap-tpls.min.js')
-  body
+  body(ng-controller='MainCtrl')
     block content
