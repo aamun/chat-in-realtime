@@ -3,25 +3,29 @@ html {
 }
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  height: -moz-calc(100% - 20px);
-  height: -webkit-calc(100% - 20px);
-  height: calc(100% - 20px);
+  height: 100%;
 }
-
+.view{
+  height: 100%;
+}
+#login{
+  margin-top: -60px;
+}
 section#chatroom {
-  height: -moz-calc(100% - 140px);
-  height: -webkit-calc(100% - 140px);
-  height: calc(100% - 140px);
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
+.chatroom{
+  height: 100%;
+  padding-bottom: 40px;
+}
 div#messages {
-  height: -moz-calc(100% - 35px);
-  height: -webkit-calc(100% - 35px);
-  height: calc(100% - 35px);
+  height: 100%;
+  max-height: 100%;
   padding: 10px;
-  -moz-box-sizing:border-box;
-  -webkit-box-sizing:border-box;
-  box-sizing:border-box;
+  overflow: scroll;
 }
 .myMessage, .userMessage{
   text-align: left;
@@ -66,7 +70,11 @@ footer{
   outline: none;
 }
 #message{
+  height: 40px;
   position: fixed;
+  padding-left: 10px;
+  left: 0;
+  right: 0;
   bottom: 0;
   border-radius: 0;
 }
